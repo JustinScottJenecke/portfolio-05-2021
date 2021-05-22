@@ -12,16 +12,19 @@ body {
 }
 
 a:link {
+    border-radius: 7px;
     text-decoration: none;
-    color: black;    
+    color: rgb(230, 230, 230);    
 }
 a:visited {
     text-decoration: none;
-    color: black;    
+    color: rgb(230, 230, 230);  
 }
 a:hover {
+    transition-duration: 500ms;
     text-decoration: none;
-    color: rgb(8, 130, 252);    
+    background-color: whitesmoke;
+    color: black;   
 }
 
 p {
@@ -63,6 +66,7 @@ p {
     flex-direction: column;
     background-color: rgb(51, 63, 80);
     color: whitesmoke;
+    text-align: center;
 }
 
 .outer {
@@ -96,14 +100,15 @@ p {
 }
 .float-box2 {
     flex: 1;
-    padding-top: 15%;  
+    padding-top: 12%;  
 
 }
 
 .float-btn {
 
-    font-size: larger;
     font-family:'Consolas', sans-serif;
+    font-size: larger;
+
 
     color: white;
     background-color: transparent;
@@ -134,18 +139,13 @@ p {
 
 }
 
-.nav > button {
-
+.nav > a {
     font-size: larger;
-
-    border: none;
-    border-radius: 7px;
-
-    background-color: rgb(34, 42, 53);
-    color: whitesmoke;
+    padding-left: 1%;
+    padding-right: 1%;
 
 }
-
+/*
 .nav > button:hover {
 
     transition-duration: 300ms;
@@ -153,7 +153,7 @@ p {
     background-color: whitesmoke;
 
 }
-
+*/
 /*---------------------------------------------
                     Body General
 ---------------------------------------------*/
@@ -390,6 +390,10 @@ p {
     text-align: center;
 }
 
+#contact > p {
+    margin-top: 0;
+    
+}
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -473,10 +477,11 @@ p {
 }
 
 /*--------------Contact info list-------------*/
-.sm-list {
+.form-contactInfo {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    column-gap: 4em;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 5vw;
+    padding-top: 1vh;
     font-size: large;
     
 }
@@ -492,7 +497,7 @@ p {
     font-size: large;
 
     margin: 0px;
-    padding: 0 7% 0 7%;
+    padding: 0 2vw 0 2vw;
 
     border-radius: 7px 7px 0 0;
     border-style: none;
@@ -501,6 +506,29 @@ p {
     background-color: rgb(34, 42, 53);
 }
 
+.sm-itemDetails {
+    visibility: hidden;
+}
+
+.sm-item:hover > .sm-itemDetails {
+    visibility: visible;
+}
+
+.sm-itemDetails span {
+    padding: 1%;
+    position: relative;
+    left: 1vw;
+    cursor: pointer;
+    
+}
+
+.sm-itemDetails span:hover {
+    border-radius: 45%;
+    background-color: whitesmoke;
+    
+}
+
+/*
 .sm-item ul{
     display: none;  
 
@@ -508,7 +536,6 @@ p {
     margin: 0px;
 
     list-style: none;
-   /* border-radius: 0 0 7px 7px;*/
 
     color: black;
     background-color: white;
@@ -520,9 +547,12 @@ p {
 }
 
 .sm-item:hover > ul{
-    display: block;
+    display: flex;
+    position: absolute;
+    width: 100%;
 
 }
+*/
 /*
 .sm-item ul:last-child:hover{
 
